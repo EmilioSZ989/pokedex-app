@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokédex Pixel Art</title>
+    <link rel="stylesheet" href="src/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="pokedex-container">
+        <div class="pokedex">
+            <div class="left-panel">
+                <div class="header-lights">
+                    <div class="light red"></div>
+                    <div class="light yellow"></div>
+                    <div class="light green"></div>
+                </div>
+
+                <div class="screen-container">
+                    <div class="screen" id="pokemonDisplay">
+                        <img src="" alt="Sprite del Pokémon" id="pokemonSprite" class="pokemon-image"/>
+                    </div>
+                    <div class="control-panel">
+                        <div class="d-pad">
+                            <div class="d-pad-up"></div>
+                            <div class="d-pad-left"></div>
+                            <div class="d-pad-center"></div>
+                            <div class="d-pad-right"></div>
+                            <div class="d-pad-down"></div>
+                        </div>
+                        <div class="buttons">
+                            <div class="button blue" id="prevEvolution"></div>
+                            <div class="button red" id="nextEvolution"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Buscar Pokémon" />
+                    <button id="searchButton">Buscar</button>
+                </div>
+
+                <div class="pokemon-info">
+                    <h2 id="pokemonName">Nombre</h2>
+                    <p id="pokemonDescription">Descripción</p>
+                </div>
+            </div>
+
+            <div class="right-panel">
+                <div class="stats-chart-container">
+                    <h2>Estadísticas</h2>
+                    <canvas id="statsChart"></canvas>
+                </div>
+
+                <div class="evolution-section">
+                    <h2>Evoluciones</h2>
+                    <div class="evolution-chain" id="evolutionChainDisplay">
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="src/main.js"></script>
+</body>
+</html>
